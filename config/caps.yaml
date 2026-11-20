@@ -1,0 +1,11 @@
+# PROPOSED, NOT SET. Git-FED must edit these values.
+total_daily_hours: 4
+total_weekly_hours: 25
+per_game:
+  Undawn: { daily: 2, weekly: 12 }
+  Trails_of_Cold_Steel_III: { daily: 2, weekly: 10 }
+  Yu-Gi-Oh_Duel_Links: { daily: 1, weekly: 7 }
+  Neverwinter: { daily: 1, weekly: 7 }
+  Sword_Art_Online_Integral_Factor: { daily: 1, weekly: 7 }
+alert_at: [75, 90, 100]
+quiet_hours: "02:00-08:00 America/New_York"

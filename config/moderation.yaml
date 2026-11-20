@@ -1,0 +1,7 @@
+report_daily: true
+report_weekly: true
+alert_on_cap: true
+alert_on_price_drop: true
+auto_buy: false
+auto_play: false
+auto_friend: false

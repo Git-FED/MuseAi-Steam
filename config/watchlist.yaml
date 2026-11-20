@@ -1,0 +1,5 @@
+# Starter watchlist. Fill from the real Steam wishlist.
+items:
+  - { game: "", target_price_usd: null, notify_on: [sale, price_drop, new_dlc] }
+  - { game: "Trails of Cold Steel IV", target_price_usd: null, notify_on: [sale] }
+  - { game: "Undawn successor / survival MMO", target_price_usd: 0, notify_on: [free, new_release] }

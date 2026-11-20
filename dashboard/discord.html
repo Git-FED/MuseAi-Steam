@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Discord Servers | Muse</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .discord-wrap{max-width:760px;margin:0 auto;text-align:center}
+  .discord-title{font-size:clamp(42px,7vw,76px);letter-spacing:-.075em;line-height:.92;margin:18px 0 16px}
+  .discord-title span{color:var(--acid)}
+  .discord-widget{display:flex;flex-direction:column;align-items:center;gap:22px;margin:30px auto 0;padding:28px;background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(16px);box-shadow:0 24px 70px #0008}
+  .discord-widget iframe{width:350px;max-width:100%;height:500px;border:0;box-shadow:0 18px 55px #0009}
+  .server-buttons{display:flex;flex-direction:column;gap:12px;width:min(100%,420px);margin:26px auto 0}
+  .server-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px 18px;border-radius:8px;font:700 12px 'DM Mono';letter-spacing:.04em;text-decoration:none;border:1px solid transparent;box-shadow:0 8px 22px #0005;transition:transform .18s,box-shadow .18s,background .18s}
+  .server-btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0008}
+  .server-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+  .server-btn svg{width:20px;height:20px;fill:currentColor}
+  .server-btn.github{background:#4e5058;color:#fff}
+  .server-btn.github:hover{background:#3c3e44}
+  .server-btn.museai{background:#fff;color:#5865f2;border-color:#dfe2e7}
+  .server-btn.museai:hover{background:#edeffd}
+  .server-btn.nsfw{background:#ed4245;color:#fff}
+  .server-btn.nsfw:hover{background:#c93b3e}
+  .server-btn .tag{font-size:10px;padding:3px 6px;border-radius:4px;background:#0005}
+  .section-label{align-self:flex-start;margin:10px 0 0;font:700 11px 'DM Mono';letter-spacing:.12em;color:var(--muted)}
+  .age-gate{width:min(92vw,430px);border:1px solid #4e5058;border-radius:12px;background:#2b2d31;color:#f2f3f5;padding:28px;box-shadow:0 24px 70px #000a}
+  .age-gate::backdrop{background:#000b;backdrop-filter:blur(5px)}
+  .age-gate h2{margin:0 0 10px;font-size:22px}
+  .age-gate p{color:#c4c7ce;line-height:1.55;font-size:14px}
+  .verify{display:flex;gap:10px;align-items:flex-start;text-align:left;padding:13px;border:1px solid #4e5058;border-radius:8px;background:#1e1f22;color:#dbdee1;font-size:13px;line-height:1.45;margin:18px 0}
+  .verify input{width:18px;height:18px;accent-color:#ed4245;flex:none;margin-top:1px}
+  .gate-actions{display:flex;flex-direction:column;gap:9px}
+  .gate-btn{font:700 12px 'DM Mono';padding:13px;border-radius:8px;border:1px solid transparent;cursor:pointer}
+  .gate-btn.confirm{background:#ed4245;color:#fff}.gate-btn.confirm:disabled{opacity:.45;cursor:not-allowed}
+  .gate-btn.cancel{background:transparent;color:#c4c7ce;border-color:#4e5058}
+  .nsfw-message{display:none;margin:22px auto 0;padding:18px;border:1px solid #ed4245;background:#2a1f20;color:#f2f3f5;line-height:1.55;font-size:13px}
+  .nsfw-message.show{display:block;animation:rise .35s ease both}
+  .nsfw-message a{color:#fff;font-weight:800}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.server-btn:hover{transform:none}.nsfw-message.show{animation:none}}
+</style>
+</head>
+<body>
+<div class="ambient"><i></i><i></i><i></i><i></i><i></i></div>
+<main class="shell">
+  <div class="ticker"><div class="ticker-track">✦ MUSE SIGNAL ROOM &nbsp; / &nbsp; COMMUNITY LINKS &nbsp; / &nbsp; RESPECT THE GATES &nbsp; / &nbsp; NO DIRECT NSFW INVITES &nbsp; / &nbsp; ✦ MUSE SIGNAL ROOM &nbsp; / &nbsp;</div></div>
+  <header>
+    <a class="brand" href="index.html"><img src="brand-mark.svg" alt="Muse symbol"><span><strong>MUSE / STEAM TRACKER</strong><small>LOCAL OBSERVER</small></span></a>
+    <nav class="nav"><a href="index.html">DASHBOARD</a><a href="reports.html">REPORTS</a><a href="discord.html">DISCORD</a><a class="nav-cta" href="payments.html">SUPPORT MUSE</a></nav>
+  </header>
+  <section class="discord-wrap">
+    <p class="eyebrow">COMMUNITY / 06</p>
+    <h1 class="discord-title">Join the <span>signal room.</span></h1>
+    <p class="lede" style="margin:0 auto">The server widget is centered below. Choose a community lane, or use the 18+ flow for the NSFW server.</p>
+    <section class="discord-widget">
+      <iframe src="https://discord.com/widget?id=1400235929154879490&theme=dark" title="Muse Discord community" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      <a class="button ghost" href="https://discord.com/" target="_blank" rel="noopener noreferrer">OPEN DISCORD HTML →</a>
+    </section>
+    <div class="server-buttons">
+      <a class="server-btn github" href="https://discord.com/invite/Jm4XStx4Pf" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.37a19.8 19.8 0 0 0-4.88-1.52.08.08 0 0 0-.08.04c-.21.38-.44.86-.61 1.25a18.3 18.3 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04A19.7 19.7 0 0 0 3.68 4.37C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 5.99 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-1.99a.08.08 0 0 0-.04-.11 13.1 13.1 0 0 1-1.87-.89.08.08 0 0 1-.01-.13c.13-.09.25-.19.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01c.12.1.25.2.37.29a.08.08 0 0 1-.01.13c-.6.35-1.23.65-1.87.89a.08.08 0 0 0-.04.11c.36.7.77 1.36 1.23 1.99a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42c1.21 0 2.18 1.1 2.16 2.42 0 1.33-.96 2.42-2.16 2.42Zm7.98 0c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42c1.21 0 2.18 1.1 2.16 2.42 0 1.33-.95 2.42-2.16 2.42Z"/></svg>GitHub — Coding</a>
+      <a class="server-btn museai" href="https://discord.com/invite/dPPdvYys2a" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.37a19.8 19.8 0 0 0-4.88-1.52.08.08 0 0 0-.08.04c-.21.38-.44.86-.61 1.25a18.3 18.3 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04A19.7 19.7 0 0 0 3.68 4.37C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 5.99 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.3 1.23-1.99a.08.08 0 0 0-.04-.11 13.1 13.1 0 0 1-1.87-.89.08.08 0 0 1-.01-.13c.13-.09.25-.19.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01c.12.1.25.2.37.29a.08.08 0 0 1-.01.13c-.6.35-1.23.65-1.87.89a.08.08 0 0 0-.04.11c.36.7.77 1.36 1.23 1.99a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6-3.03.08.08 0 0 0 .03-.05c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42s.96-2.42 2.16-2.42c1.21 0 2.18 1.1 2.16 2.42 0 1.33-.96 2.42-2.16 2.42Zm7.98 0c-1.18 0-2.16-1.08-2.42 2.16 0 1.33-.96 2.42-2.16 2.42Z"/></svg>MuseAi — AI Agents</a>
+      <p class="section-label">OTHER</p>
+      <button class="server-btn nsfw" id="nsfwBtn" type="button"><span aria-hidden="true">⚠</span>Patreon <span class="tag">18+ NSFW</span></button>
+    </div>
+    <div id="nsfwMessage" class="nsfw-message" role="status" aria-live="polite">Thanks for confirming. To request the NSFW Discord redirect, email <a href="mailto:museai@fedpromptly.com?subject=NSFW%20Discord%20redirect%20request">museai@fedpromptly.com</a>. The NSFW invite is not exposed or opened directly from this page.</div>
+  </section>
+  <footer class="site-footer">
+  <div class="footer-glow"></div>
+  <div class="footer-topline"><span class="footer-mark">✦</span><strong>FED-OS</strong><span class="footer-pulse">PUBLIC SIGNALS / PRIVATE ROOMS / HUMAN CONTROL</span></div>
+  <div class="footer-grid">
+    <section><h3>Explore</h3><div class="footer-icons">
+      <a href="https://www.fedpromptly.org" target="_blank" rel="noopener" aria-label="Explore the FED-OS ecosystem" title="Ecosystem">⌂</a>
+      <a href="https://www.fedpromptly.com/aid" target="_blank" rel="noopener" aria-label="Join FED-OS membership" title="Membership">✦</a>
+      <a href="https://www.jabburr.com/fed-os" target="_blank" rel="noopener" aria-label="Open FED-OS storefront" title="Store">▣</a>
+      <a href="https://whop.com/fedpromptly/" target="_blank" rel="noopener" aria-label="Open Whop products" title="Whop">◇</a>
+    </div></section>
+    <section><h3>Support</h3><div class="footer-icons">
+      <a href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noopener" aria-label="Supporters on Patreon" title="Patreon">♥</a>
+      <a href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noopener" aria-label="Tips and donations" title="Tips">+</a>
+      <a href="payments.html" aria-label="Support Muse payment options" title="Payments">$</a>
+      <a href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noopener" aria-label="Developers Discord" title="Developers">◈</a>
+    </div></section>
+    <section><h3>Media</h3><div class="footer-icons">
+      <a href="https://substack.com/@fedpromptly" target="_blank" rel="noopener" aria-label="Articles" title="Articles">≡</a>
+      <a href="https://fedpromptly.wordpress.com/" target="_blank" rel="noopener" aria-label="Blog" title="Blog">▤</a>
+      <a href="https://gitfed.substack.com/" target="_blank" rel="noopener" aria-label="GitFed Blog" title="GitFed Blog">G</a>
+      <a href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noopener" aria-label="Artwork" title="Artwork">✧</a>
+      <a href="https://bsky.app/profile/fed-os.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky" title="Bluesky">◎</a>
+      <a href="https://x.com/Fedpromptly" target="_blank" rel="noopener" aria-label="Advertisement and X" title="X">𝕏</a>
+    </div></section>
+    <section><h3>Contact</h3><div class="footer-icons">
+      <a href="mailto:contact@fedpromptly.com" aria-label="General contact" title="General">@</a>
+      <a href="mailto:support@fedpromptly.com" aria-label="Support contact" title="Support">?</a>
+      <a href="mailto:business@fedpromptly.com" aria-label="Business contact" title="Business">⌁</a>
+      <a href="mailto:careers@fedpromptly.com" aria-label="Careers contact" title="Careers">↗</a>
+    </div></section>
+  </div>
+  <div class="footer-private"><a href="private-communities.html">Private Communities <span>18+ / country check / invite-only</span> →</a></div>
+  <div class="footer-bottom"><span>MUSE DOES NOT BUY, PLAY, ADD FRIENDS, OR CHANGE SETTINGS.</span><span>STATIC HTML // GITHUB PAGES + CLOUDFLARE READY</span></div>
+</footer>
+</main>
+<dialog id="ageGate" class="age-gate">
+  <h2>Age Verification Required</h2>
+  <p>The Patreon server contains <strong>adult (18+ / NSFW)</strong> content. To continue, confirm that you are of legal age in your country.</p>
+  <label class="verify"><input type="checkbox" id="ageCheck"><span>I confirm that I am 18 years or older and consent to viewing adult content.</span></label>
+  <div class="gate-actions"><button type="button" class="gate-btn confirm" id="ageConfirm" disabled>SHOW EMAIL REQUEST</button><button type="button" class="gate-btn cancel" id="ageCancel">CANCEL</button></div>
+</dialog>
+<script>
+const gate=document.getElementById('ageGate');const nsfwBtn=document.getElementById('nsfwBtn');const ageCheck=document.getElementById('ageCheck');const ageConfirm=document.getElementById('ageConfirm');const ageCancel=document.getElementById('ageCancel');const message=document.getElementById('nsfwMessage');
+nsfwBtn.addEventListener('click',()=>{ageCheck.checked=false;ageConfirm.disabled=true;gate.showModal()});
+ageCheck.addEventListener('change',()=>{ageConfirm.disabled=!ageCheck.checked});
+ageConfirm.addEventListener('click',()=>{if(!ageCheck.checked)return;gate.close();message.classList.add('show');message.scrollIntoView({behavior:'smooth',block:'center'})});
+ageCancel.addEventListener('click',()=>gate.close());
+gate.addEventListener('click',e=>{if(e.target===gate)gate.close()});
+</script>
+</body>
+</html>

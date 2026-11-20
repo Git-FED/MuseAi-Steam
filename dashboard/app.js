@@ -1,0 +1,1 @@
+const ambient=document.querySelector('.ambient');let t=0;function breathe(){t+=.003;if(ambient)ambient.style.filter=`hue-rotate(${Math.sin(t)*3}deg)`;requestAnimationFrame(breathe)}breathe();document.querySelectorAll('[data-scroll]').forEach(b=>b.addEventListener('click',()=>document.querySelector(b.dataset.scroll)?.scrollIntoView({behavior:'smooth'})));
